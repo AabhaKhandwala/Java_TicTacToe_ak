@@ -10,7 +10,9 @@ public class TicTacToePlay {
         while (!(ttt.isWinner('X') || ttt.isWinner('O') || ttt.isFull())) {
             ttt.displayBoard();
             System.out.println("Enter your location:(row,column): ");
+            System.out.print("row: ");
             int row = scan.nextInt();
+            System.out.print("column: ");
             int column = scan.nextInt();
 
             while (ttt.isValid(row, column) == false || ttt.playerAt(row, column) != ' ') {
@@ -21,7 +23,10 @@ public class TicTacToePlay {
                     System.out.println("That location is already full. Try again.");
 
                 System.out.print("Enter your location (row, column): ");
+                System.out.print("row: ");
+
                 row = scan.nextInt();
+                System.out.print("column: ");
                 column = scan.nextInt();
             }
 
@@ -41,6 +46,7 @@ public class TicTacToePlay {
             System.out.println("O is the winner!");
         if (ttt.isCat())
             System.out.println("The game is a tie.");
+        scan.close();
 
     }
 }

@@ -43,7 +43,7 @@ public class TicTacToeClass {
     }
 
     public boolean isCat() {
-        if ((!isWinner('X') && isFull()) || (!isWinner('O') && isFull()))
+        if (!isWinner('X') && isFull() && !isWinner('O'))
             return true;
         return false;
     }
